@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Chunnilal Mega Mart logo">
+<defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f7e26b"/><stop offset=".55" stop-color="#39c5b4"/><stop offset="1" stop-color="#4c7fe8"/></linearGradient><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff6b6b"/><stop offset="1" stop-color="#f5b642"/></linearGradient><linearGradient id="g3" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d94a92"/><stop offset="1" stop-color="#8c234b"/></linearGradient></defs>
+<g stroke="#17191e" stroke-width="2.2" stroke-linejoin="round">
+<path fill="url(#g1)" d="M16 42 41 12 61 30 49 50 18 59Z"/>
+<path fill="#4c83d9" d="M41 12 75 18 82 44 61 30Z"/>
+<path fill="#34bca8" d="M61 30 82 44 104 27 96 56 70 64 49 50Z"/>
+<path fill="url(#g2)" d="M16 42 18 59 42 79 49 50Z"/>
+<path fill="#f2d04e" d="M18 59 10 82 42 79 57 97 70 64 49 50Z"/>
+<path fill="url(#g3)" d="M70 64 96 56 110 75 83 105 57 97Z"/>
+<path fill="#e95a72" d="M42 79 57 97 83 105 66 116 34 93Z"/>
+<path fill="#df4c5a" d="M18 59 34 93 10 82Z"/>
+</g></svg>
