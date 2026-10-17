@@ -26,6 +26,19 @@ export default function Catalog() {
       <Reveal id="shop" className={sec}>
         <p className="text-xs uppercase tracking-[.2em] text-gold">Collections</p>
         <h2 className="font-serif text-4xl font-extrabold md:text-5xl">Find your style</h2>
+        <p className="mt-3 max-w-2xl text-ivory/70">Shop by collection — choose a category to see its styles.</p>
+        <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-4">
+          {CATS.map((name, i) => (
+            <button key={name} onClick={() => goCat(i)} className="group overflow-hidden rounded-2xl border border-gold/30 bg-white/[.045] p-2 text-left transition duration-300 hover:-translate-y-1 hover:border-gold hover:bg-white/[.08]">
+              <div className="relative">
+                <Art ci={i} a={["#9b1230","#8e1b3a","#b5651d","#a63446","#2b2b36","#2d4a7a","#5b6b3a","#b0245a"][i]} b="#e8c36a" />
+                <span className="absolute bottom-2 right-2 rounded-full border border-gold/40 bg-[#1a0509]/85 px-2.5 py-1 text-[10px] uppercase tracking-widest text-gold">Explore ↗</span>
+              </div>
+              <span className="mt-3 block px-1 pb-1 font-serif text-base font-bold leading-snug sm:text-lg">{name}</span>
+            </button>
+          ))}
+        </div>
+        <div className="my-7 h-px w-full bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
         <div className="my-5 flex flex-wrap items-center gap-3">
           <div className="relative max-w-[460px] flex-1 basis-64">
             <input ref={input} type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Search sarees, jeans, kurti…" aria-label="Search products" autoComplete="off"
