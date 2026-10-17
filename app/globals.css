@@ -4,3 +4,7 @@ body{background:#1a0509;color:#f7efe3;overflow-x:hidden}
 :focus-visible{outline:2px solid #c9a24b;outline-offset:3px}
 dialog::backdrop{background:rgba(10,2,4,.75)}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+
+.fabric-sweep{transform-origin:center;animation:fabric-flow 9s ease-in-out infinite}
+@keyframes fabric-flow{0%,100%{transform:translate3d(-7px,0,0) rotate(-1deg);opacity:.88}50%{transform:translate3d(9px,-5px,0) rotate(1deg);opacity:.68}}
+@media(prefers-reduced-motion:reduce){.fabric-sweep{animation:none}}
