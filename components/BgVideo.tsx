@@ -1,24 +1,14 @@
 "use client";
-import { useEffect, useRef } from "react";
-
-// Fixed full-screen looping background (the owner's logo video) under a burgundy overlay.
+// Lightweight branded background; does not rely on missing video files or block page loading.
 export default function BgVideo() {
-  const ref = useRef<HTMLVideoElement>(null);
-  useEffect(() => {
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) { ref.current?.remove(); return; }
-    const go = () => { ref.current?.play().catch(() => {}); };
-    addEventListener("intro-done", go);
-    return () => removeEventListener("intro-done", go);
-  }, []);
   return (
     <>
-      <div aria-hidden className="fixed inset-0 -z-20 bg-[#0b1010]">
-        <video ref={ref} muted loop playsInline preload="metadata" onError={(e) => e.currentTarget.remove()} className="h-full w-full object-cover object-center">
-          <source src="/media/logo-intro.webm" type="video/webm" />
-          <source src="/media/logo-intro.mp4" type="video/mp4" />
-        </video>
+      <div aria-hidden className="pointer-events-none fixed inset-0 -z-20 bg-[#100509]">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_18%_15%,rgba(124,19,47,.30),transparent_38%),radial-gradient(ellipse_at_85%_65%,rgba(201,162,75,.10),transparent_32%),linear-gradient(135deg,#1a0509,#12070b_55%,#210913)]" />
+        <div className="absolute -left-32 top-[20%] h-72 w-72 rounded-full bg-crimson/10 blur-3xl" />
+        <div className="absolute -right-32 top-[58%] h-80 w-80 rounded-full bg-gold/5 blur-3xl" />
       </div>
-      <div aria-hidden className="fixed inset-0 -z-10 bg-[#0a0305]/75" />
+      <div aria-hidden className="pointer-events-none fixed inset-0 -z-10 bg-[#0a0305]/10" />
     </>
   );
 }
